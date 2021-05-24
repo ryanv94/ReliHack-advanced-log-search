@@ -1,0 +1,39 @@
+{
+  "schemaType": "VISUALIZATION",
+  "id": "log-search",
+  "displayName": "LogSearch",
+  "description": "",
+  "configuration": [
+    {
+      "name": "nrqlQueries",
+      "title": "NRQL Queries",
+      "type": "collection",
+      "items": [
+        {
+          "name": "accountId",
+          "title": "Account ID",
+          "description": "Account ID to be associated with the query",
+          "type": "number"
+        },
+        {
+          "name": "query",
+          "title": "Query",
+          "description": "NRQL query for visualization",
+          "type": "nrql"
+        }
+      ]
+    },
+    {
+      "name": "openAsStacked",
+      "title": "Open as Overlay",
+      "description": "Set if you want to open entity as overlay",
+      "type": "boolean"
+    },
+    {
+      "name": "enableSelectAll",
+      "title": "Allow Select All Button",
+      "description": "Set if you want to have the option to select all attributes returned from query",
+      "type": "boolean"
+    }
+  ]
+}

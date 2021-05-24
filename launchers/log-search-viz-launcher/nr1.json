@@ -1,0 +1,7 @@
+{
+    "schemaType": "LAUNCHER",
+    "id": "log-search-viz-launcher",
+    "displayName": "LogSearchVizLauncher",
+    "description": "Describe me",
+    "rootNerdletId": "log-search-viz-nerdlet"
+}

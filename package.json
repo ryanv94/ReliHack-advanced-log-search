@@ -1,0 +1,24 @@
+{
+    "private": true,
+    "name": "log-search-viz",
+    "version": "1.0.0",
+    "scripts": {
+        "start": "nr1 nerdpack:serve",
+        "test": "exit 0"
+    },
+    "nr1": {
+        "uuid": "6c58a41a-0daa-4350-9e90-49f12a018c4e"
+    },
+    "dependencies": {
+        "prop-types": "^15.6.2",
+        "react-select": "^3.0.8",
+        "react": "^16.6.3",
+        "react-dom": "^16.6.3",
+        "recharts": "^2.0.9"
+    },
+    "browserslist": [
+        "last 2 versions",
+        "not ie < 11",
+        "not dead"
+    ]
+}
