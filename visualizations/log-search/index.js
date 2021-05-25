@@ -161,7 +161,7 @@ export default class LogSearchVisualization extends React.Component {
 
               return (
                 <>
-                  <TextField type={TextField.TYPE.SEARCH} placeholder="e.g. Placeholder" onChange={this.onTextBoxChange} />
+                  <TextField type={TextField.TYPE.SEARCH} placeholder="your search term" onChange={this.onTextBoxChange} />
                   <Select 
                     onChange = {this.onSelectChange}
                     onSelectResetsInput={false} 
@@ -185,18 +185,35 @@ const EmptyState = () => (
   <Card className="EmptyState">
     <CardBody className="EmptyState-cardBody">
       <HeadingText
-        spacingType={[HeadingText.SPACING_TYPE.LARGE]}
+        spacingType={[HeadingText.SPACING_TYPE.SMALL]}
         type={HeadingText.TYPE.HEADING_3}
       >
-        Please provide the NRQL query below & account ID
+        Documentation:
       </HeadingText>
       <HeadingText
-        spacingType={[HeadingText.SPACING_TYPE.MEDIUM]}
-        type={HeadingText.TYPE.HEADING_4}
+        spacingType={[HeadingText.SPACING_TYPE.SMALL]}
+        type={HeadingText.TYPE.HEADING_5}
       >
-        An example NRQL query you can try is:
+        Enter your Account ID, as well as the following query into the config editor on the right hand side:
+
+      <p></p>
+      <code style={{color: "blue"}}>SELECT keyset() FROM Log SINCE 1 WEEK AGO</code>
+      <p></p>
+      
+          You can change the SINCE clause to pull in all Log events for your preferred time range
+
+          Once your Query and Account ID are set, you should see the following options. 
+
+          <img src="https://imgur.com/QmZt2QQ.jpg" style={{width: "80%"}}></img>
+          <p></p>
+          The search box should be populated with the string you are looking for across the log attributes you'll select next.
+          The drop down (here with a few options already selected) allows you to pick which Log attributes you'd like to search against.
+
+
       </HeadingText>
-      <code>Select keyset() from Log</code>
+
+        
+
     </CardBody>
   </Card>
 );
@@ -209,7 +226,7 @@ const ErrorState = () => (
         spacingType={[HeadingText.SPACING_TYPE.LARGE]}
         type={HeadingText.TYPE.HEADING_3}
       >
-        Oops! Something went wrong.
+        Oops! Something went wrong. Double check your configuration. 
       </HeadingText>
     </CardBody>
   </Card>
