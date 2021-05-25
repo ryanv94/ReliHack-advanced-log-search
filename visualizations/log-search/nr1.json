@@ -24,12 +24,6 @@
       ]
     },
     {
-      "name": "openAsStacked",
-      "title": "Open as Overlay",
-      "description": "Set if you want to open entity as overlay",
-      "type": "boolean"
-    },
-    {
       "name": "enableSelectAll",
       "title": "Allow Select All Button",
       "description": "Set if you want to have the option to select all attributes returned from query",

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import {Card, CardBody, HeadingText, NrqlQuery, Spinner, AutoSizer,TextField, Button, navigation, UserStorageMutation, UserStorageQuery} from 'nr1';
+import {Card, CardBody, HeadingText, NrqlQuery, Spinner, AutoSizer,TextField, Button, navigation, UserStorageMutation, UserStorageQuery, Toast} from 'nr1';
 import Select from 'react-select';
 
 export default class LogSearchVisualization extends React.Component {
@@ -88,12 +88,30 @@ export default class LogSearchVisualization extends React.Component {
     }
   }
 
-  onSelectChange(values){
-    let selectedAttributes = values.value
-    if (values.constructor === Array){
-      selectedAttributes = values.map(value => value.value)
+  onSelectChange(values,action){
+    
+    
+    if (action && action.action=='clear'){
+      this.setState({selectedAttributeValues : null})
+      return
     }
-    this.setState({selectedAttributeValues : selectedAttributes})
+    else{
+      let selectedAttributes = values.value
+
+      if (values.constructor === Array){
+        selectedAttributes = values.map(value => value.value)
+      }
+
+      if (selectedAttributes.length > 30){
+        Toast.showToast({
+          title: 'Warning',
+          description: 'You have many attributes selected, adding too many may cause the UI to crash',
+          type: Toast.TYPE.NORMAL,
+        });
+      }
+      this.setState({selectedAttributeValues : selectedAttributes})
+    } 
+    
   }
 
   onTextBoxChange(event){
@@ -158,19 +176,17 @@ export default class LogSearchVisualization extends React.Component {
               }
 
 
-
               return (
                 <>
                   <TextField type={TextField.TYPE.SEARCH} placeholder="e.g. Placeholder" onChange={this.onTextBoxChange} />
                   <Select 
                     onChange = {this.onSelectChange}
-                    onSelectResetsInput={false} 
                     isMulti 
                     defaultValue={defaultValues}
                     options={attributeOptions}
                   />
                   <Button onClick={() => this.buttonClick(this.state.selectedAttributeValues,this.state.searchValue, accountId, openAsStacked, false)} type={Button.TYPE.PRIMARY}>Search Selected Attributes</Button>
-                  <SearchAllButton/>
+                  <SearchAllButton/>                   
                 </>
               );
             }}
