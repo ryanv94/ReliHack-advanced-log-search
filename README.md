@@ -23,6 +23,25 @@ npm start
 
 Visit https://one.newrelic.com/?nerdpacks=local, open Apps => Custom Visualisations, and :sparkles:
 
+**Note** - The above will allow you to run a local version of the Advanced Log Search visualisation. Use the below instructions to publish to your account for more permanent usage.
+
+Clone the Visualisation Repo:
+
+```sh
+nr1 nerdpack:clone -r https://.....
+```
+
+Change directory into the newly cloned folder & run the following scripts:
+
+```sh
+cd advanced-log-search
+npm install
+nr1 nerdpack:publish
+```
+
+Visit https://one.newrelic.com, open Apps, look to the Application Catalog (you can select Visualisations here). Find the Advanced Log Search visualisation add that to your account. 
+
+
 ## Using the visualisation
 
 You must use the specified query: 
