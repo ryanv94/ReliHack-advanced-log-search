@@ -1,3 +1,6 @@
 # Ignore node_modules folder
 node_modules
 
+tmp/2dcc711b-5a58-46f2-ad69-14e0b7260a83-styles.1622031395742.scss
+*.scss
+*.scss
