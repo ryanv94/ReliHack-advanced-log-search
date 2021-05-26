@@ -1,22 +1,41 @@
-# @REPO@
+# Advanced Log Search
+
+## Intro
+The Advanced Log Search visualisation takes the pain out of searching across multple attributes in the Logs UI. 
+
+Simply pick the attributes you'd like to search against, enter your search criteria, and :sparkles: - you'll be taken to the Logs UI with your search pre-populated in the filter bar.
 
 ## Getting started
 
-Run the following scripts:
+Clone the Visualisation Repo:
 
+```sh
+nr1 nerdpack:clone -r https://.....
 ```
+
+Change directory into the newly cloned folder & run the following scripts:
+
+```sh
+cd advanced-log-search
 npm install
 npm start
 ```
 
-Visit https://one.newrelic.com/?nerdpacks=local and :sparkles:
+Visit https://one.newrelic.com/?nerdpacks=local, open Apps => Custom Visualisations, and :sparkles:
 
-## Creating new artifacts
+## Using the visualisation
 
-If you want to create new artifacts run the following command:
+You must use the specified query: 
 
+```sql
+SELECT keyset() FROM Log
 ```
-nr1 create
-```
+_Optional: You may include a timerange with a `since` clause_
 
-> Example: `nr1 create --type nerdlet --name my-nerdlet`.
+The keyset() keyword will return all available attributes of the specified event type (Log). This allows the attribute selection to pre-populate with the list of attributes you could search across. 
+
+Select the attributes you are interested in, and then enter your search criteria. Hit _Search selected attributes_ - and you'll be taken to the Logs UI with your search criteria pre-populated. 
+
+Check out this video walkthrough:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/eLVPyvzVzHk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
