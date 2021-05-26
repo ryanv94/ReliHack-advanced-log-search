@@ -3,7 +3,7 @@
 ## Intro
 The Advanced Log Search visualisation takes the pain out of searching across multple attributes in the Logs UI. 
 
-Simply pick the attributes you'd like to search against, enter your search criteria, and :sparkles: - you'll be taken to the Logs UI with your search pre-populated in the filter bar.
+Simply pick the attributes you'd like to search against, enter your search criteria, and that's it - you'll be taken to the Logs UI with your search pre-populated in the filter bar.
 
 ## Getting started
 
