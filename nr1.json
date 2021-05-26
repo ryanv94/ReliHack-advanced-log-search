@@ -1,6 +1,6 @@
 {
   "schemaType": "NERDPACK",
   "id": "2dcc711b-5a58-46f2-ad69-14e0b7260a83",
-  "displayName": "LogSearchViz",
-  "description": "Nerdpack log-search-viz"
+  "displayName": "Advanced Log Search",
+  "description": "Custom Vizualisation - for searching across multiple attributes within New Relic Logs."
 }
