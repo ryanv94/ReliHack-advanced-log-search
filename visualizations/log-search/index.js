@@ -209,10 +209,16 @@ const EmptyState = () => (
           The search box should be populated with the string you are looking for across the log attributes you'll select next.
           The drop down (here with a few options already selected) allows you to pick which Log attributes you'd like to search against.
 
-
       </HeadingText>
 
-        
+      <HeadingText
+        spacingType={[HeadingText.SPACING_TYPE.SMALL]}
+        type={HeadingText.TYPE.HEADING_3}
+      >
+        Video Demo:
+        <p></p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/eLVPyvzVzHk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </HeadingText> 
 
     </CardBody>
   </Card>
@@ -227,6 +233,8 @@ const ErrorState = () => (
         type={HeadingText.TYPE.HEADING_3}
       >
         Oops! Something went wrong. Double check your configuration. 
+        <p></p>
+        Make sure that you have a query specified, AND, an account ID selected.
       </HeadingText>
     </CardBody>
   </Card>
