@@ -1,7 +1,7 @@
 {
   "schemaType": "VISUALIZATION",
   "id": "log-search",
-  "displayName": "LogSearch",
+  "displayName": "Advanced Log Search",
   "description": "",
   "configuration": [
     {
