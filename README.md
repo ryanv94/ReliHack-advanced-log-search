@@ -38,4 +38,4 @@ Select the attributes you are interested in, and then enter your search criteria
 
 Check out this video walkthrough:
 
-https://www.youtube.com/watch?v=eLVPyvzVzHk
+![](https://www.youtube.com/watch?v=eLVPyvzVzHk)
