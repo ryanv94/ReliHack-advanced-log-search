@@ -59,3 +59,11 @@ Check out this video walkthrough:
 
 [![Watch on Youtube!](https://imgur.com/It5DrUN.jpg)](https://www.youtube.com/watch?v=eLVPyvzVzHk)
 _(Click the image to watch on YouTube.)_
+
+
+## Reli Hack Submission Team
+
+| Team All Seeing Logs  | Job Title | NR Team |
+| ------------- | ------------- | ------------- |
+| Sean Winters  | Solutions Architect  | Expert Services |
+| Ryan Veitch  | Technical Account Manager  | Expert Services |
