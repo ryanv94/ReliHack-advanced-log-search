@@ -41,6 +41,7 @@ nr1 nerdpack:publish
 
 Visit https://one.newrelic.com, open Apps, look to the Application Catalog (you can select Visualisations here). Find the Advanced Log Search visualisation add that to your account. 
 
+If you come up against errors - try run `nr1 nerdpack:uuid -gf` to regenerate the Nerdpack's UUID with your own NR CLI & API credentials. 
 
 ## Using the visualisation
 
